@@ -1,0 +1,68 @@
+@btnBaseGray: #EAEAEA;
+@btnBaseWhite: #FFF;
+@btnBaseColor: #EF6925;
+@btnSecondaryColor: #e74c3c;
+
+.grayGradientBg
+{
+    background: @btnBaseGray; /* Old browsers */
+    background: -moz-linear-gradient(top, @btnBaseWhite 28%, @btnBaseGray 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(28%,@btnBaseWhite), color-stop(100%,@btnBaseGray)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @btnBaseWhite 28%,@btnBaseGray 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @btnBaseWhite 28%,@btnBaseGray 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @btnBaseWhite 28%,@btnBaseGray 100%); /* IE10+ */
+    background: linear-gradient(top, @btnBaseWhite 28%,@btnBaseGray 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@btnBaseWhite', endColorstr='@btnBaseGray',GradientType=0 ); /* IE8-9 */
+}
+
+.colorGradientBg
+{
+    background: #8ac341; /* Old browsers */
+    background: -moz-linear-gradient(top, @btnBaseColor 0%, @btnSecondaryColor 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@btnBaseColor), color-stop(100%,@btnSecondaryColor)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @btnBaseColor 0%,@btnSecondaryColor 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @btnBaseColor 0%,@btnSecondaryColor 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @btnBaseColor 0%,@btnSecondaryColor 100%); /* IE10+ */
+    background: linear-gradient(top, @btnBaseColor 0%,@btnSecondaryColor 100%); /* W3C */
+    -pie-background: linear-gradient(@btnBaseColor, @btnSecondaryColor); /*PIE*/
+    behavior: url(../Content/PIE/PIE.htc);
+}
+
+.btnStyle
+{
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px 3px 3px 3px;
+    display: block;
+    font-size: 14pt;
+    font-weight: bold;
+    height: 41px;
+    line-height: 42px;
+    padding: 0 9px;
+    outline: none;
+	text-decoration:none;	
+}
+
+.btnStyleAdditional
+{
+    border-color: @btnBaseColor;
+    color: #FFF;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.GenericButton
+{
+	.colorGradientBg;
+	.btnStyle;
+	.btnStyleAdditional;
+}
+
+.GenericButton:hover
+{
+	.grayGradientBg;
+	.btnStyle;
+
+	color: @btnBaseColor;
+    border: 1px solid @btnBaseColor;
+}

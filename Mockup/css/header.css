@@ -1,0 +1,36 @@
+/* Header Style - Elements below Main Menu are considered as secondary header */
+#headerWrapper
+{
+   margin-bottom:10px;     
+}
+
+#headerWrapper h1
+{        
+    color:#fff; 
+    font-size:13pt;        
+    margin-bottom:10px;   
+    border-bottom: 2px solid #e74c3c;
+}
+
+#headerWrapper span
+{        
+    color:#fff;   
+    font-size:10pt;   
+}
+
+#contentBox1,
+#contentBox2,
+#contentBox3
+{   
+    min-height:185px;    
+    background-color: #00ACCF;
+}
+
+.ha-header-front {
+	background-color:#2F2D46 !important;
+}
+
+.ha-header-front span
+{
+    color:#fff;    
+}

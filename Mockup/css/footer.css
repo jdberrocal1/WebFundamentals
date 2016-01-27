@@ -1,0 +1,47 @@
+/* Footer Style - Elements included under footer container */
+#footer
+{    
+	float:left;	
+	width:100%;
+	height: auto;	
+	margin-top:25px;
+	padding:15px 0 15px 0;
+	background-color:#00ACCF;	
+}
+
+#footerWrapper
+{
+   width:960px;
+   margin:0 auto;
+   text-align:left;    
+}
+
+#footerBox1,
+#footerBox2,
+#footerBox3
+{   
+    min-height:150px;    
+    background-color: #00ACCF;
+}
+
+#footerBox1 h1,
+#footerBox2 h1,
+#footerBox3 h1
+{
+    color:#fff;
+    font-size:14pt;    
+}
+
+#footerBox1 span,
+#footerBox2 span,
+#footerBox3 span
+{
+    color:#fff;
+    font-size:10pt;    
+}
+
+#footer ul
+{
+    color:#fff;    
+    list-style-type:none;
+}

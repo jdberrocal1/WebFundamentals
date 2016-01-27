@@ -1,0 +1,55 @@
+/* Generic Styles - Basic CSS style sheet for site */
+*{
+   margin:0;
+   padding:0;
+}
+ 
+body
+{
+   font-family:Verdana; 
+   text-align:center;    
+   color:#323232; 
+   font-size:10pt;
+}
+
+#contentWrapper
+{
+   clear:left;   
+   position:relative;   
+   width:960px;
+   margin:0 auto;
+   text-align:left;
+}
+ 
+.leftAlign
+{    
+    float:left;      
+    width:312px;
+    padding:7px;
+}
+
+.rightAlign
+{    
+    float:right;    
+    width:312px;
+    padding:7px;
+}
+
+.centerAlign
+{
+    margin:auto;    
+    width:312px;
+    padding:7px;
+}
+
+.wideLeftAlign
+{
+    float:left;
+    width:435px;    
+}
+
+.wideRightAlign
+{
+    float:left;
+    width:525px;    
+}
