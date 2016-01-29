@@ -1,0 +1,168 @@
+﻿@model IEnumerable<DRX.Common.Models.Contacts.DTO.ContactDTO>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div id="contentWrapper">
+    <div id="headerWrapper" class="ha-waypoint">
+        <table cellpadding="2px">
+            <tr>
+                <td>
+                    <div id="contentBox1" style="width:312px; padding:7px;">
+                        <h1><i class="fa fa-certificate"></i> Lorem Ipsum Dolor</h1>
+                        <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sagittis urna lacinia justo dictum venenatis. Donec ac dapibus nunc. Praesent convallis id elit vitae imperdiet. Nunc nec purus sodales, rhoncus purus id, dictum elit.
+                        </span>
+                    </div>
+                </td>
+                <td>
+                    <div id="contentBox2" style=" width:auto; padding:7px; margin:0 7px 0 7px;">
+                        <h1><i class="fa fa-cloud"></i> Consectetur Adipiscing</h1>
+                        <span>
+                            Morbi sit amet blandit nisl. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec nec suscipit massa. Etiam id erat libero. Sed nulla tellus, mattis quis feugiat eu, ultrices quis est. Nam tempor non justo ut condimentum.
+                        </span>
+                    </div>
+                </td>
+                <td>
+                    <div id="contentBox3" style="width:312px; padding:7px;">
+                        <h1><i class="fa fa-book"></i> Maecenas Pellentesque</h1>
+                        <span>
+                            Curabitur tristique leo at velit consectetur, ut euismod purus tempus. Sed imperdiet tincidunt quam. Vivamus vitae tincidunt quam. Nam in neque purus. Aenean lacus dolor, dictum vel convallis sit amet, hendrerit id erat.
+                        </span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="infoWrapper">
+        <div class="row">
+            <div class="col-lg-5">
+                <table id="personalInfo">
+                    <thead>
+                        <tr>
+                            <th>
+                                <span>Name</span>
+                            </th>
+                            <th>
+                                <span>Email</span>
+                            </th>
+                            <th>
+                                <span>Phone</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr><td>@Html.DisplayFor(modelItem => item.Name)</td><td>@Html.DisplayFor(modelItem => item.Email)</td><td>@Html.DisplayFor(modelItem => item.Phone)</td></tr>
+                        }
+
+                    </tbody>
+                </table>
+                <div id="infoButtonSet">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)" class="GenericButton" id="btnAdd">
+                                <div>Add</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="GenericButton" id="btnUpdate">
+                                <div>Update</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="GenericButton" id="btnDelete">
+                                <div>Delete</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div id="carousel-example-generic" class="wideRightAlign carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <div id="imageBox" style="z-index: 5;">
+                                <i class="fa fa-empire fa-;" style="z-index: 10; color: White;"></i>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div id="imageBox" style="z-index: 5;">
+                                <i class="fa fa-rebel fa-;" style="z-index: 10; color: White;"></i>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div id="imageBox" style="z-index: 5;">
+                                <i class="fa fa-github fa-;" style="z-index: 10; color: White;"></i>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div id="imageBox" style="z-index: 5;">
+                                <i class="fa fa-html5 fa-;" style="z-index: 10; color: White;"></i>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div id="imageBox" style="z-index: 5;">
+                                <i class="fa fa-css3 fa-;" style="z-index: 10; color: White;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="aboutUs">
+        <h1><i class="fa fa-th-large"></i> Lorem ipsum</h1>
+        <p>Morbi efficitur non sem ac aliquet. Nullam cursus condimentum elit, a elementum quam gravida et. Suspendisse interdum erat sed elementum feugiat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam ut sem efficitur, laoreet nunc et, molestie sapien. Ut consequat consequat accumsan. Duis posuere ipsum eget elementum pellentesque. Quisque facilisis eget sem varius iaculis.</p>
+        <p>Suspendisse at rutrum ligula. Quisque ac est vitae lacus elementum aliquet. Morbi sapien eros, tincidunt sit amet elit vel, gravida luctus orci. Nulla quam ligula, tristique vel tortor vel, pellentesque finibus tortor. Suspendisse potenti. Nullam turpis enim, sodales eget urna pretium, facilisis convallis est. Sed sed imperdiet erat, vitae mollis ex. Pellentesque egestas efficitur diam, nec faucibus est hendrerit non. Etiam molestie fermentum tortor, vel rutrum felis. Mauris tempor sagittis ligula, nec convallis enim ornare sit amet. Ut placerat metus quis nulla laoreet porta. Cras blandit augue vel ipsum euismod, vel dignissim sapien posuere.</p>
+        <p>Integer vulputate efficitur sem, ut molestie ligula interdum eget. Nam nec lorem ligula. In hac habitasse platea dictumst. Donec sit amet iaculis dolor. Pellentesque sit amet elit magna. Quisque rhoncus ornare rutrum. Nunc convallis lectus lorem. Vestibulum vel dui malesuada massa bibendum faucibus. Quisque rhoncus, ex sit amet bibendum aliquam, libero enim venenatis dolor, vel hendrerit est velit et magna.</p>
+        <p>Morbi efficitur non sem ac aliquet. Nullam cursus condimentum elit, a elementum quam gravida et. Suspendisse interdum erat sed elementum feugiat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam ut sem efficitur, laoreet nunc et, molestie sapien. Ut consequat consequat accumsan. Duis posuere ipsum eget elementum pellentesque. Quisque facilisis eget sem varius iaculis.</p>
+        <p>Suspendisse at rutrum ligula. Quisque ac est vitae lacus elementum aliquet. Morbi sapien eros, tincidunt sit amet elit vel, gravida luctus orci. Nulla quam ligula, tristique vel tortor vel, pellentesque finibus tortor. Suspendisse potenti. Nullam turpis enim, sodales eget urna pretium, facilisis convallis est. Sed sed imperdiet erat, vitae mollis ex. Pellentesque egestas efficitur diam, nec faucibus est hendrerit non. Etiam molestie fermentum tortor, vel rutrum felis. Mauris tempor sagittis ligula, nec convallis enim ornare sit amet. Ut placerat metus quis nulla laoreet porta. Cras blandit augue vel ipsum euismod, vel dignissim sapien posuere.</p>
+        <p>Integer vulputate efficitur sem, ut molestie ligula interdum eget. Nam nec lorem ligula. In hac habitasse platea dictumst. Donec sit amet iaculis dolor. Pellentesque sit amet elit magna. Quisque rhoncus ornare rutrum. Nunc convallis lectus lorem. Vestibulum vel dui malesuada massa bibendum faucibus. Quisque rhoncus, ex sit amet bibendum aliquam, libero enim venenatis dolor, vel hendrerit est velit et magna.</p>
+        <p>Morbi efficitur non sem ac aliquet. Nullam cursus condimentum elit, a elementum quam gravida et. Suspendisse interdum erat sed elementum feugiat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam ut sem efficitur, laoreet nunc et, molestie sapien. Ut consequat consequat accumsan. Duis posuere ipsum eget elementum pellentesque. Quisque facilisis eget sem varius iaculis.</p>
+        <p>Suspendisse at rutrum ligula. Quisque ac est vitae lacus elementum aliquet. Morbi sapien eros, tincidunt sit amet elit vel, gravida luctus orci. Nulla quam ligula, tristique vel tortor vel, pellentesque finibus tortor. Suspendisse potenti. Nullam turpis enim, sodales eget urna pretium, facilisis convallis est. Sed sed imperdiet erat, vitae mollis ex. Pellentesque egestas efficitur diam, nec faucibus est hendrerit non. Etiam molestie fermentum tortor, vel rutrum felis. Mauris tempor sagittis ligula, nec convallis enim ornare sit amet. Ut placerat metus quis nulla laoreet porta. Cras blandit augue vel ipsum euismod, vel dignissim sapien posuere.</p>
+        <p>Integer vulputate efficitur sem, ut molestie ligula interdum eget. Nam nec lorem ligula. In hac habitasse platea dictumst. Donec sit amet iaculis dolor. Pellentesque sit amet elit magna. Quisque rhoncus ornare rutrum. Nunc convallis lectus lorem. Vestibulum vel dui malesuada massa bibendum faucibus. Quisque rhoncus, ex sit amet bibendum aliquam, libero enim venenatis dolor, vel hendrerit est velit et magna.</p>
+
+        <h2 class="ha-waypoint" data-animate-down="ha-header-small" data-animate-up="ha-header-large">Pellentesque id luctus</h2>
+        <p>Vestibulum consectetur sed metus quis condimentum. Morbi placerat euismod finibus. Suspendisse sit amet risus cursus, scelerisque augue in, porta elit. Suspendisse euismod massa lorem, vel tincidunt odio convallis et. Cras id sagittis erat. Donec vulputate ultrices ante et finibus. Donec facilisis velit eu gravida convallis. Cras tincidunt blandit enim sodales hendrerit. Nunc in congue odio, ut rutrum dolor. Pellentesque vulputate dignissim magna. Maecenas semper leo diam. Sed in aliquam felis, non tempor felis. Sed dictum mi vitae enim aliquet bibendum.</p>
+        <p>Ut elementum dictum rhoncus. Nulla id turpis ut dui mattis bibendum. Maecenas condimentum porta orci. Praesent nulla urna, fermentum in metus in, ultrices condimentum est. Mauris vestibulum consectetur quam, quis placerat eros varius non. Sed rhoncus nibh augue, sed ultricies nisl accumsan non. Suspendisse ultrices pretium fermentum.</p>
+        <p>Nam dictum eros vitae aliquam facilisis. Proin consectetur euismod velit quis condimentum. Pellentesque id luctus justo, eget sollicitudin nisl. Mauris auctor pharetra augue, vel vulputate nisl luctus eu. Duis fringilla facilisis convallis. Aliquam erat volutpat. Mauris bibendum eros at suscipit dictum. Fusce volutpat pellentesque lobortis. Donec tincidunt purus ut sem semper condimentum. In egestas, metus sed mollis lobortis, nunc justo pretium dolor, nec semper sapien mi nec nunc. Nulla a sem quis ante sagittis ultricies vel ut elit. Aliquam erat volutpat. Aenean euismod dignissim sem, ac volutpat ante finibus nec. Donec sagittis dictum efficitur. Cras hendrerit, dui commodo laoreet fringilla, libero lorem auctor tellus, sit amet sollicitudin massa purus at elit.</p>
+        <p>Donec vulputate mauris lectus, in porttitor purus eleifend tempor. Nam scelerisque finibus felis, at viverra diam auctor auctor. Ut in laoreet nibh, malesuada feugiat ex. In ultrices dictum ipsum, ac suscipit neque consectetur sed. Aliquam facilisis placerat diam, eget blandit diam maximus a. Ut tristique elit scelerisque nisi porta consequat. Curabitur suscipit ultrices ante. Nulla massa augue, imperdiet quis sapien ut, venenatis aliquam urna. </p>
+
+        <h1 class="ha-waypoint" data-animate-down="ha-header-rotateBack" data-animate-up="ha-header-shrink"><i class="fa fa-th-large"></i> Vulputate Mauris</h1>
+        <p>Morbi efficitur non sem ac aliquet. Nullam cursus condimentum elit, a elementum quam gravida et. Suspendisse interdum erat sed elementum feugiat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam ut sem efficitur, laoreet nunc et, molestie sapien. Ut consequat consequat accumsan. Duis posuere ipsum eget elementum pellentesque. Quisque facilisis eget sem varius iaculis.</p>
+        <p>Suspendisse at rutrum ligula. Quisque ac est vitae lacus elementum aliquet. Morbi sapien eros, tincidunt sit amet elit vel, gravida luctus orci. Nulla quam ligula, tristique vel tortor vel, pellentesque finibus tortor. Suspendisse potenti. Nullam turpis enim, sodales eget urna pretium, facilisis convallis est. Sed sed imperdiet erat, vitae mollis ex. Pellentesque egestas efficitur diam, nec faucibus est hendrerit non. Etiam molestie fermentum tortor, vel rutrum felis. Mauris tempor sagittis ligula, nec convallis enim ornare sit amet. Ut placerat metus quis nulla laoreet porta. Cras blandit augue vel ipsum euismod, vel dignissim sapien posuere.</p>
+        <p>Integer vulputate efficitur sem, ut molestie ligula interdum eget. Nam nec lorem ligula. In hac habitasse platea dictumst. Donec sit amet iaculis dolor. Pellentesque sit amet elit magna. Quisque rhoncus ornare rutrum. Nunc convallis lectus lorem. Vestibulum vel dui malesuada massa bibendum faucibus. Quisque rhoncus, ex sit amet bibendum aliquam, libero enim venenatis dolor, vel hendrerit est velit et magna.</p>
+        <p>Nam dictum eros vitae aliquam facilisis. Proin consectetur euismod velit quis condimentum. Pellentesque id luctus justo, eget sollicitudin nisl. Mauris auctor pharetra augue, vel vulputate nisl luctus eu. Duis fringilla facilisis convallis. Aliquam erat volutpat. Mauris bibendum eros at suscipit dictum. Fusce volutpat pellentesque lobortis. Donec tincidunt purus ut sem semper condimentum. In egestas, metus sed mollis lobortis, nunc justo pretium dolor, nec semper sapien mi nec nunc. Nulla a sem quis ante sagittis ultricies vel ut elit. Aliquam erat volutpat. Aenean euismod dignissim sem, ac volutpat ante finibus nec. Donec sagittis dictum efficitur. Cras hendrerit, dui commodo laoreet fringilla, libero lorem auctor tellus, sit amet sollicitudin massa purus at elit.</p>
+        <p>Donec vulputate mauris lectus, in porttitor purus eleifend tempor. Nam scelerisque finibus felis, at viverra diam auctor auctor. Ut in laoreet nibh, malesuada feugiat ex. In ultrices dictum ipsum, ac suscipit neque consectetur sed. Aliquam facilisis placerat diam, eget blandit diam maximus a. Ut tristique elit scelerisque nisi porta consequat. Curabitur suscipit ultrices ante. Nulla massa augue, imperdiet quis sapien ut, venenatis aliquam urna. </p>
+
+        <h2 class="ha-waypoint" data-animate-down="ha-header-rotate" data-animate-up="ha-header-rotateBack">Proin Consectetur</h2>
+        <p>Morbi efficitur non sem ac aliquet. Nullam cursus condimentum elit, a elementum quam gravida et. Suspendisse interdum erat sed elementum feugiat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam ut sem efficitur, laoreet nunc et, molestie sapien. Ut consequat consequat accumsan. Duis posuere ipsum eget elementum pellentesque. Quisque facilisis eget sem varius iaculis.</p>
+        <p>Suspendisse at rutrum ligula. Quisque ac est vitae lacus elementum aliquet. Morbi sapien eros, tincidunt sit amet elit vel, gravida luctus orci. Nulla quam ligula, tristique vel tortor vel, pellentesque finibus tortor. Suspendisse potenti. Nullam turpis enim, sodales eget urna pretium, facilisis convallis est. Sed sed imperdiet erat, vitae mollis ex. Pellentesque egestas efficitur diam, nec faucibus est hendrerit non. Etiam molestie fermentum tortor, vel rutrum felis. Mauris tempor sagittis ligula, nec convallis enim ornare sit amet. Ut placerat metus quis nulla laoreet porta. Cras blandit augue vel ipsum euismod, vel dignissim sapien posuere.</p>
+        <p>Integer vulputate efficitur sem, ut molestie ligula interdum eget. Nam nec lorem ligula. In hac habitasse platea dictumst. Donec sit amet iaculis dolor. Pellentesque sit amet elit magna. Quisque rhoncus ornare rutrum. Nunc convallis lectus lorem. Vestibulum vel dui malesuada massa bibendum faucibus. Quisque rhoncus, ex sit amet bibendum aliquam, libero enim venenatis dolor, vel hendrerit est velit et magna.</p>
+        <p>Vestibulum consectetur sed metus quis condimentum. Morbi placerat euismod finibus. Suspendisse sit amet risus cursus, scelerisque augue in, porta elit. Suspendisse euismod massa lorem, vel tincidunt odio convallis et. Cras id sagittis erat. Donec vulputate ultrices ante et finibus. Donec facilisis velit eu gravida convallis. Cras tincidunt blandit enim sodales hendrerit. Nunc in congue odio, ut rutrum dolor. Pellentesque vulputate dignissim magna. Maecenas semper leo diam. Sed in aliquam felis, non tempor felis. Sed dictum mi vitae enim aliquet bibendum.</p>
+        <p>Ut elementum dictum rhoncus. Nulla id turpis ut dui mattis bibendum. Maecenas condimentum porta orci. Praesent nulla urna, fermentum in metus in, ultrices condimentum est. Mauris vestibulum consectetur quam, quis placerat eros varius non. Sed rhoncus nibh augue, sed ultricies nisl accumsan non. Suspendisse ultrices pretium fermentum.</p>
+        <p>Nam dictum eros vitae aliquam facilisis. Proin consectetur euismod velit quis condimentum. Pellentesque id luctus justo, eget sollicitudin nisl. Mauris auctor pharetra augue, vel vulputate nisl luctus eu. Duis fringilla facilisis convallis. Aliquam erat volutpat. Mauris bibendum eros at suscipit dictum. Fusce volutpat pellentesque lobortis. Donec tincidunt purus ut sem semper condimentum. In egestas, metus sed mollis lobortis, nunc justo pretium dolor, nec semper sapien mi nec nunc. Nulla a sem quis ante sagittis ultricies vel ut elit. Aliquam erat volutpat. Aenean euismod dignissim sem, ac volutpat ante finibus nec. Donec sagittis dictum efficitur. Cras hendrerit, dui commodo laoreet fringilla, libero lorem auctor tellus, sit amet sollicitudin massa purus at elit.</p>
+        <p>Donec vulputate mauris lectus, in porttitor purus eleifend tempor. Nam scelerisque finibus felis, at viverra diam auctor auctor. Ut in laoreet nibh, malesuada feugiat ex. In ultrices dictum ipsum, ac suscipit neque consectetur sed. Aliquam facilisis placerat diam, eget blandit diam maximus a. Ut tristique elit scelerisque nisi porta consequat. Curabitur suscipit ultrices ante. Nulla massa augue, imperdiet quis sapien ut, venenatis aliquam urna. </p>
+    </div>
+</div>
+

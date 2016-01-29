@@ -1,0 +1,365 @@
+﻿@model SoundConnect.Survey.Portal.Models.PCPSurvey
+
+@{
+    ViewBag.Title = "PCP Survey";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="panel-heading" id="welcomeHeading">
+        <h3 class="panel-title">
+            Welcome, Dr. <span class="fa fa-question-circle" id="doctorSpan"> @Model.Survey.ProviderLastName</span>
+        </h3>
+    </div>
+    <div class="panel-body two-col">
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <p>
+                        The Hospitalist Team at <span id="facilitySpan"> @Model.Survey.FacilityName</span> appreciates you taking a couple of minutes to give us your feedback . We will
+                        be using this feedback to better drive quality, satisfaction, and efficiency improvements to our partners in patient care.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <p>
+                    <strong> 1. @Model.Question1.QuestionText: </strong>
+                    @Html.HiddenFor(m => m.Question1.QuestionText)
+                    <br />@Html.ValidationMessageFor(model => model.Question1)
+                </p>
+            </div>
+        </div>
+        <div class="row" data-click-to-select="true" data-select-item-name="radioGroupFirstQuestion">
+            <div class="col-md-12">
+                <div class="margin-bottom-none">
+                    <div>
+                        <label class="radioLabelPCPQ1">
+                            @Html.RadioButtonFor(m => m.Question1.Response, "Internal Medicine", new { id = "radioQ1A1" })
+                            Internal Medicine
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="margin-bottom-none">
+                    <div>
+                        <label class="radioLabelPCPQ1">
+                            @Html.RadioButtonFor(m => m.Question1.Response, "Family Medicine", new { id = "radioQ1A2" })
+                            Family Medicine
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="margin-bottom-none">
+                    <div>
+                        <label class="radioLabelPCPQ1">
+                            @Html.RadioButtonFor(m => m.Question1.Response, "Other", new { id = "radioQ1A3" })
+                            Other (please specify)
+                        </label>
+                    </div>
+                    <div class="col-md-7 col-lg-offset-0">
+                        @Html.TextBoxFor(m => m.Question1.Note, new { id = "txtbxQ1A3Specify" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    <strong> 2. Please check the rating that best describe your response regarding the Sound Physicians hospitalist program: </strong>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th data-field="description"></th>
+                            <th data-field="stronglyAgree" class="text-center headerRadio" data-radio="true">Strongly Agree</th>
+                            <th data-field="Agree" class="text-center headerRadio" data-radio="true">Agree</th>
+                            <th data-field="Neutral" class="text-center headerRadio" data-radio="true">Neutral</th>
+                            <th data-field="disagree" class="text-center headerRadio" data-radio="true">Disagree</th>
+                            <th data-field="stronglyDisagree" class="text-center headerRadio" data-radio="true">Strongly Disagree</th>
+                            <th data-field="N/A" class="text-center" data-radio="true">N/A</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-click-to-select="true" data-select-item-name="radioRowGroupOne">
+                            <td>
+                                @Model.Question2A.QuestionText
+                                <br />@Html.ValidationMessageFor(model => model.Question2A)
+                            </td>
+                            @Html.HiddenFor(m => m.Question2A.QuestionText)
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2A.Response, "Strongly Agree", new { id = "radioQ2A1StronglyAgree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2A.Response, "Agree", new { id = "radioQ2A1Agree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2A.Response, "Neutral", new { id = "radioQ2A1Neutral" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2A.Response, "Disagree", new { id = "radioQ2A1Disagree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2A.Response, "Strongly Disagree", new { id = "radioQ2A1StronglyDisagree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2A.Response, "N/A", new { id = "radioQ2A1N/A" })
+                            </td>
+                        </tr>
+                        <tr data-click-to-select="true" data-select-item-name="radioRowGroupTwo">
+                            <td>
+                                @Model.Question2B.QuestionText
+                                <br />@Html.ValidationMessageFor(model => model.Question2B)
+                            </td>
+                            @Html.HiddenFor(m => m.Question2B.QuestionText)
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2B.Response, "Strongly Agree", new { id = "radioQ2A2StronglyAgree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2B.Response, "Agree", new { id = "radioQ2A2Agree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2B.Response, "Neutral", new { id = "radioQ2A2Neutral" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2B.Response, "Disagree", new { id = "radioQ2A2Disagree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2B.Response, "Strongly Disagree", new { id = "radioQ2A2StronglyDisagree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2B.Response, "N/A", new { id = "radioQ2A2N/A" })
+                            </td>
+                        </tr>
+                        <tr data-click-to-select="true" data-select-item-name="radioRowGroupThree">
+                            <td>
+                                @Model.Question2C.QuestionText
+                                <br />@Html.ValidationMessageFor(model => model.Question2C)
+                            </td>
+                            @Html.HiddenFor(m => m.Question2C.QuestionText)
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2C.Response, "Strongly Agree", new { id = "radioQ2A3StronglyAgree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2C.Response, "Agree", new { id = "radioQ2A3Agree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2C.Response, "Neutral", new { id = "radioQ2A3Neutral" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2C.Response, "Disagree", new { id = "radioQ2A3Disagree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2C.Response, "Strongly Disagree", new { id = "radioQ2A3StronglyDisagree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2C.Response, "N/A", new { id = "radioQ2A3N/A" })
+                            </td>
+                        </tr>
+                        <tr data-click-to-select="true" data-select-item-name="radioRowGroupFour">
+                            <td>
+                                @Model.Question2D.QuestionText
+                                <br />@Html.ValidationMessageFor(model => model.Question2D)
+                            </td>
+                            @Html.HiddenFor(m => m.Question2D.QuestionText)
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2D.Response, "Strongly Agree", new { id = "radioQ2A4StronglyAgree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2D.Response, "Agree", new { id = "radioQ2A4Agree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2D.Response, "Neutral", new { id = "radioQ2A4Neutral" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2D.Response, "Disagree", new { id = "radioQ2A4Disagree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2D.Response, "Strongly Disagree", new { id = "radioQ2A4StronglyDisagree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2D.Response, "N/A", new { id = "radioQ2A4N/A" })
+                            </td>
+                        </tr>
+                        <tr data-click-to-select="true" data-select-item-name="radioRowGroupFive">
+                            <td>
+                                @Model.Question2E.QuestionText
+                                <br />@Html.ValidationMessageFor(model => model.Question2E)
+                            </td>
+                            @Html.HiddenFor(m => m.Question2E.QuestionText)
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2E.Response, "Strongly Agree", new { id = "radioQ2A5StronglyAgree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2E.Response, "Agree", new { id = "radioQ2A5Agree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2E.Response, "Neutral", new { id = "radioQ2A5Neutral" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2E.Response, "Disagree", new { id = "radioQ2A5Disagree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2E.Response, "Strongly Disagree", new { id = "radioQ2A5StronglyDisagree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2E.Response, "N/A", new { id = "radioQ2A5N/A" })
+                            </td>
+                        </tr>
+                        <tr data-click-to-select="true" data-select-item-name="radioRowGroupSix">
+                            <td>
+                                @Model.Question2F.QuestionText
+                                <br />@Html.ValidationMessageFor(model => model.Question2F)
+                            </td>
+                            @Html.HiddenFor(m => m.Question2F.QuestionText)
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2F.Response, "Strongly Agree", new { id = "radioQ2A6StronglyAgree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2F.Response, "Agree", new { id = "radioQ2A6Agree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2F.Response, "Neutral", new { id = "radioQ2A6Neutral" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2F.Response, "Disagree", new { id = "radioQ2A6Disagree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2F.Response, "Strongly Disagree", new { id = "radioQ2A6StronglyDisagree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2F.Response, "N/A", new { id = "radioQ2A6N/A" })
+                            </td>
+                        </tr>
+                        <tr data-click-to-select="true" data-select-item-name="radioRowGroupSeven">
+                            <td>
+                                @Model.Question2G.QuestionText
+                                <br />@Html.ValidationMessageFor(model => model.Question2G)
+                            </td>
+                            @Html.HiddenFor(m => m.Question2G.QuestionText)
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2G.Response, "Strongly Agree", new { id = "radioQ2A7StronglyAgree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2G.Response, "Agree", new { id = "radioQ2A7Agree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2G.Response, "Neutral", new { id = "radioQ2A7Neutral" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2G.Response, "Disagree", new { id = "radioQ2A7Disagree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2G.Response, "Strongly Disagree", new { id = "radioQ2A7StronglyDisagree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2G.Response, "N/A", new { id = "radioQ2A7N/A" })
+                            </td>
+                        </tr>
+                        <tr data-click-to-select="true" data-select-item-name="radioRowGroupEight">
+                            <td>
+                                @Model.Question2H.QuestionText
+                                <br />@Html.ValidationMessageFor(model => model.Question2H)
+                            </td>
+                            @Html.HiddenFor(m => m.Question2H.QuestionText)
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2H.Response, "Strongly Agree", new { id = "radioQ2A8StronglyAgree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2H.Response, "Agree", new { id = "radioQ2A8Agree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2H.Response, "Neutral", new { id = "radioQ2A8Neutral" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2H.Response, "Disagree", new { id = "radioQ2A8Disagree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2H.Response, "Strongly Disagree", new { id = "radioQ2A8StronglyDisagree" })
+                            </td>
+                            <td class="text-center">
+                                @Html.RadioButtonFor(m => m.Question2H.Response, "N/A", new { id = "radioQ2A8N/A" })
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    <strong> @Model.Question2Why.QuestionText </strong>
+                    @Html.HiddenFor(m => m.Question2Why.QuestionText)
+                    <br />@Html.ValidationMessageFor(model => model.Question2Why)
+                </p>
+            </div>
+            <div class="col-md-12">
+                @Html.TextAreaFor(m => m.Question2Why.Response, new { id = "textareaQ2Why", rows = "5", cols = "250" })
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    <strong> 3. @Model.Question3.QuestionText </strong>
+                    @Html.HiddenFor(m => m.Question3.QuestionText)
+                    <br />@Html.ValidationMessageFor(model => model.Question3)
+                </p>
+            </div>
+            <div class="col-md-12">
+                @Html.TextAreaFor(m => m.Question3.Response, new { id = "textareaQ3A1", rows = "5", cols = "250" })
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    <strong> 4. @Model.Question4.QuestionText </strong>
+                    @Html.HiddenFor(m => m.Question4.QuestionText)
+                    <br />@Html.ValidationMessageFor(model => model.Question4)
+                </p>
+            </div>
+            <div class="col-md-12">
+                @Html.TextAreaFor(m => m.Question4.Response, new { id = "textareaQ4A1", rows = "5", cols = "250" })
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    <strong> 5. @Model.Question5.QuestionText </strong>
+                    @Html.HiddenFor(m => m.Question5.QuestionText)
+                    <br />@Html.ValidationMessageFor(model => model.Question5)
+                </p>
+            </div>
+            <div class="col-md-12">
+                @Html.TextAreaFor(m => m.Question5.Response, new { id = "textareaQ5A1", rows = "5", cols = "250" })
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer panel-white">
+        <div class="row">
+            <div class="col-md-2 col-md-offset-5 col-xs-2 col-xs-offset-5">
+                <input type="submit" value="Submit" class="btn btn-primary btn-sm btn-block" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        @* Update the model to use in the controller *@
+        @Html.HiddenFor(m => m.Survey.Id)
+        @Html.HiddenFor(m => m.Survey.ProviderFirstName)
+        @Html.HiddenFor(m => m.Survey.ProviderLastName)
+        @Html.HiddenFor(m => m.Survey.FacilityName)
+        @Html.HiddenFor(m => m.Survey.SurveyCode)
+        @Html.HiddenFor(m => m.Survey.SurveyType)
+    </div>
+}
+

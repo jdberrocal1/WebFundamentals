@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script type="text/javascript">
+        var appInsights=window.appInsights||function(config){
+            function r(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s=u.createElement(o),i,f;for(s.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",u.getElementsByTagName(o)[0].parentNode.appendChild(s),t.cookie=u.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)r("track"+i.pop());return r("setAuthenticatedUserContext"),r("clearAuthenticatedUserContext"),config.disableExceptionTracking||(i="onerror",r("_"+i),f=e[i],e[i]=function(config,r,u,e,o){var s=f&&f(config,r,u,e,o);return s!==!0&&t["_"+i](config,r,u,e,o),s}),t
+        }({
+            instrumentationKey:"c65cbb3a-4285-48c8-819e-8698ca059034"
+        });
+        
+        window.appInsights=appInsights;
+        appInsights.trackPageView();
+    </script>
+</head>
+<body>
+<<<<<<< HEAD
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Partner Satisfaction Survey</p>
+        </footer>
+=======
+    
+    <div class="container body-content">
+@using (Html.BeginForm())
+{        
+            <div class="col-md-12" id="panel1">
+                <div class="panel panel-default">
+                    <div class="container">
+                        <img id="soundLogo" src="~/Content/Images/sound_physicians.png" alt="Sound Physicians" />
+                    </div>
+                    <div class="panel-heading" id="titleHeading">
+                        <h3 class="panel-title">
+                            <span class="fa fa-question-circle" id="titleHeadingSpan">Partner Satisfaction Survey</span>
+                        </h3>
+                    </div>
+                    @RenderBody()
+                    <footer>
+                        <div class="panel-footer">
+                            <div class="row">
+                                <div class="col-md-2 col-md-offset-5 col-xs-2 col-xs-offset-5">
+                                    <input type="submit" class="btn btn-primary btn-sm btn-block" />
+                                </div>
+                            </div>
+                        </div>
+                   </footer>
+                </div>
+            </div>   
+}
+>>>>>>> 14fcebbc13d5f0f4b5ff222866f83fc46b4530df
+    </div>
+
+                @Scripts.Render("~/bundles/jquery")
+                @Scripts.Render("~/bundles/bootstrap")
+                @RenderSection("scripts", required: false)
+</body>
+</html>

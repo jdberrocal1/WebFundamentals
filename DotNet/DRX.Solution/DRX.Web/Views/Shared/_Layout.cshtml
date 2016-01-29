@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Mockup</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header id="ha-header" class="ha-header ha-header-large">
+        <div class="ha-header-perspective">
+            <div class="ha-header-front">
+                <h1><span>Excercise Mockup</span></h1>
+                <nav>
+                    <a href="#"><i class="fa fa-home fa-lg"></i> Home</a>
+                    <a><i class="fa fa-users fa-lg"></i> About us</a>
+                    <a><i class="fa fa-laptop fa-lg"></i> Our work</a>
+                    <a href="#"><i class="fa fa-phone fa-lg"></i> Contact us</a>
+                </nav>
+            </div>
+            <div class="ha-header-bottom">
+                <nav>
+                    <a><i class="fa fa-facebook fa-lg"></i>Facebook</a>
+                    <a><i class="fa fa-twitter fa-lg"></i>Twitter</a>
+                    <a><i class="fa fa-instagram fa-lg"></i>Google+</a>
+                    <a><i class="fa fa-google-plus fa-lg"></i>Instagram</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="container body-content">
+        @RenderBody()
+        
+        <hr />
+        <div id="footer">
+            <div id="footerWrapper">
+                <div id="footerBox1" class="leftAlign">
+                    <h1>Lorem Ipsum Dolor</h1>
+                    <ul><li><i class="fa fa-check"></i> <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></li><li><i class="fa fa-check"></i> <span>Duis nec velit id purus efficitur facilisis.</span></li><li><i class="fa fa-check"></i> <span>Phasellus non urna ornare, lobortis mi a, tempus est.</span></li><li><i class="fa fa-check"></i> <span>Nam tincidunt turpis quis eros dignissim, ut rutrum tellus efficitur.</span></li><li><i class="fa fa-check"></i> <span>Donec molestie justo ut ipsum vestibulum viverra.</span></li></ul>
+                </div>
+                <div id="footerBox2" class="rightAlign">
+                    <h1>Maecenas Pellentesque</h1>
+                    <ul><li><i class="fa fa-check"></i> <span>Nulla venenatis nunc eu ante fermentum condimentum.</span></li><li><i class="fa fa-check"></i> <span>Vestibulum convallis lacus eget lacus malesuada blandit.</span></li><li><i class="fa fa-check"></i> <span>Integer efficitur nisi sed tincidunt elementum.</span></li><li><i class="fa fa-check"></i> <span>Morbi fringilla ligula viverra ipsum feugiat lobortis.</span></li><li><i class="fa fa-check"></i> <span>Nunc eu enim placerat, venenatis lorem id, tincidunt lacus.</span></li></ul>
+                </div>
+                <div id="footerBox3" class="centerAlign">
+                    <h1>Consectetur Adipiscing</h1>
+                    <ul><li><i class="fa fa-check"></i> <span>Nullam at ipsum at diam commodo egestas.</span></li><li><i class="fa fa-check"></i> <span>Curabitur blandit ligula in malesuada hendrerit.</span></li><li><i class="fa fa-check"></i> <span>Sed accumsan ligula ac nulla malesuada, et pulvinar est auctor.</span></li><li><i class="fa fa-check"></i> <span>Donec molestie ligula at diam rutrum, a viverra arcu convallis.</span></li><li><i class="fa fa-check"></i> <span>Donec molestie ligula at diam rutrum, a viverra arcu convallis.</span></li></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

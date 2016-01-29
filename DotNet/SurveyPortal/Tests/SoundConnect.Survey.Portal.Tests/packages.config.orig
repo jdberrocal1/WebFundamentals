@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<packages>
+  <package id="AutoFixture" version="3.36.9" targetFramework="net45" />
+  <package id="Microsoft.AspNet.Mvc" version="5.2.3" targetFramework="net45" />
+  <package id="Microsoft.AspNet.Razor" version="3.2.3" targetFramework="net45" />
+  <package id="Microsoft.AspNet.WebPages" version="3.2.3" targetFramework="net45" />
+  <package id="Microsoft.Web.Infrastructure" version="1.0.0.0" targetFramework="net45" />
+  <package id="Moq" version="4.2.1510.2205" targetFramework="net45" />
+<<<<<<< HEAD:SurveyPortal/Tests/SoundConnect.Survey.Portal.Tests/packages.config
+  <package id="Newtonsoft.Json" version="7.0.1" targetFramework="net45" />
+  <package id="NUnit" version="2.6.4" targetFramework="net45" />
+=======
+  <package id="MvcRouteTester" version="1.2.1" targetFramework="net45" />
+  <package id="Newtonsoft.Json" version="7.0.1" targetFramework="net45" />
+  <package id="NUnit" version="2.6.1" targetFramework="net45" />
+  <package id="Nunit.Framework.TestCaseStorage" version="1.0.1" targetFramework="net45" />
+>>>>>>> 14fcebbc13d5f0f4b5ff222866f83fc46b4530df:SurveyPortal/SoundConnect.Survey.Portal.Tests/packages.config
+</packages>

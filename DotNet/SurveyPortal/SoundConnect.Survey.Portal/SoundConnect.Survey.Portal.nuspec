@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>SoundPhysicians.SoundConnect.Survey.Portal</id>
+        <version>1.0.0</version>
+        <title>SoundConnect.Survey.Portal</title>
+        <authors>Sound Physicians</authors>
+        <owners>Sound Physicians</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Web site which provides the physicians the capability to fill out surveys.</description>
+        <copyright>Copyright 2015. Sound Inpatient Physicians</copyright>
+        <language>en-US</language>
+    </metadata>
+</package>

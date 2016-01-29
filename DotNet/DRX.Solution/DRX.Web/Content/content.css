@@ -1,0 +1,143 @@
+/* General Content Style - All containers and display elements */
+/**** Information Table *****/
+#infoWrapper table
+{        
+    color:#FFF;     
+    width:100%;
+    border:none;    
+    border-spacing: 0;
+    border-collapse: collapse;
+    font-size:10pt;
+    z-index:100;
+}
+
+#infoWrapper table thead
+{
+    background-color:#E74C3C;    
+}
+
+#infoWrapper table tbody
+{
+    color:#323232;    
+    border:none;
+}
+
+
+#infoWrapper table tbody tr td:nth-child(1)
+{
+    max-width: 150px;  
+    overflow: hidden;
+}
+
+#infoWrapper table tbody tr td:nth-child(2)
+{
+    max-width: 135px;  
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+#infoWrapper table tbody tr td:nth-child(3)
+{
+    max-width: 150px;  
+    overflow: hidden; 
+}
+
+#infoWrapper table tbody tr:nth-child(even)
+{
+    background-color:#00ACCF;  
+}
+
+#infoWrapper table tbody tr:nth-child(odd)
+{
+    background-color:#FFF;        
+}
+
+#infoWrapper table tbody tr:hover
+{
+    color:#FFF;
+    background-color:#EF6925;
+    cursor:default;
+}
+
+#infoWrapper table thead th,
+#infoWrapper table tbody td
+{
+    text-align:left;
+    padding: 2px 5px 2px 5px;    
+}
+
+#infoWrapper #imageBox
+{    
+    width: auto;  
+    
+    font-size:200pt;
+    
+
+       
+    padding: 10px 0 10px 115px;
+    background: none repeat scroll 0 0 #2f2d46;       
+}
+
+/**** About Us *****/
+#aboutUs
+{    
+    clear:both;
+    text-align:justify;    
+}
+
+#aboutUs h1
+{   
+    color:#fff; 
+    font-size:16pt;        
+    width:100%;
+    margin-top:15px;
+    padding:2px 0 2px 7px;
+    background-color:#454685;
+}
+
+#aboutUs p
+{
+    padding: 5px 0 5px 0;
+}
+
+#aboutUs h2
+{
+    color:#454685; 
+    font-size:14pt;         
+    margin:15px 0 15px 0;   
+}
+
+/**** Buttons *****/
+#btnAdd
+{
+    width:65px;    
+}
+
+#btnUpdate
+{
+    width:100px;
+}
+
+#btnDelete
+{
+    width:90px;
+}
+
+#infoButtonSet
+{    
+    margin-right:-2px;    
+}
+
+#infoButtonSet ul
+{
+    list-style-type: none; 
+    float:right;    
+    margin-top:5px;
+    margin-bottom:10px;
+}
+
+#infoButtonSet ul li
+{
+    display: inline-block;    
+    margin: 2px;    
+}

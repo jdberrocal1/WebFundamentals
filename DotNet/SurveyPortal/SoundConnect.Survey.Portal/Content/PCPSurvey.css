@@ -1,0 +1,64 @@
+﻿#cnt1 {
+    background-color: #d5d1d1;
+    margin-bottom: 70px;
+}
+
+.panel-body:not(.two-col) {
+    padding: 0px;
+}
+
+.panel-body .radio, .panel-body .checkbox {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.panel-body .list-group {
+    margin-bottom: 0;
+}
+
+.margin-bottom-none {
+    margin-bottom: 0;
+}
+
+.panel-white {
+    background-color: #FFFFFF;
+}
+
+
+#welcomeHeading {
+    background-color: #B0E0E6;
+    border-color: #B0E0E6;
+}
+
+#titleHeading {
+    background-color: #4682B4;
+    border-color: #4682B4;
+}
+
+#titleHeadingSpan {
+    color: #FFFFFF;
+}
+
+#soundLogo { 
+    height: 60px;
+    margin-bottom: 14px;
+    width: 60px;
+}
+
+textarea {
+    resize: none;
+    max-width: 50% !important;
+}
+
+.radioLabelPCPQ1
+{
+    font-weight:normal;
+    margin-bottom:auto;
+}
+
+#txtbxQ1A3Specify
+{
+    width: 300px; 
+    margin-left: 3px;
+    margin-top: 2px;
+}
